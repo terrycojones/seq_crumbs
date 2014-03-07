@@ -114,6 +114,33 @@ Installation
 seq_crumbs depends on Python 2.7. Biopython_ is a recommended dependency.
 The installation manual is located in the doc/install.rst document.
 
+Running the tests
+-----------------
+
+First, make sure you have the Python requirements. An easy way to do this
+is to use `virtualenv <https://pypi.python.org/pypi/virtualenv>`_ to make a
+virtual Python environment, then use ``pip`` to install the required packages
+via:
+
+    $ pip install -r requirements.txt
+
+The tests rely on other programs you'll need:
+
+* A C compiler, such as gcc (to build ESTScan, below).
+* G77, sometimes known as gfortran (to build ESTScan, below).
+* `ESTScan <http://sourceforge.net/projects/estscan/>`_.
+* `BWA <http://bio-bwa.sourceforge.net/>`_.
+* `samtools <http://samtools.sourceforge.net/>`_.
+* `bowtie2 <http://sourceforge.net/projects/bowtie-bio/>`_.
+
+Make sure the directories containing these tools are all in your shell
+``$PATH`` once you've built and installed them.
+
+Once you have these prerequisites installed, use the Python ``discover``
+module to find and run the tests:
+
+    $ PYTHONPATH=. python -m discover
+
 
 Related software
 ----------------

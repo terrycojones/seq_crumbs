@@ -1,0 +1,7 @@
+BioPython
+discover
+toolz
+pysam
+# If you have Python 3.3 or greater, you do not need to install bz2file.
+bz2file
+
